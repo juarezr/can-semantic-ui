@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+<script type="text/stache" can-autorender>
+  <can-import from="can-semantic-ui/ui-grid/ui-grid" />
+  <can-import from="can-semantic-ui/ui-grid/ui-column" />
+  <can-import from="can-semantic-ui/ui-grid/ui-row" />
+  <can-import from="can-semantic-ui/common.less!" />
+
+  <h3>Rendered:</h3>
+
+  <ui-grid id="rendered-grid" span="auto" >
+    <ui-column color="red" id="rendered-red-column">
+      <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+    </ui-column>
+    <ui-column color="green">
+      <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+    </ui-column>
+    <ui-row id="rendered-row">
+      <ui-column color="blue" id="rendered-blue-column">
+        <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />        
+      </ui-column>
+      <ui-column color="yellow" visible="false" >
+      <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />        
+      </ui-column>
+    </ui-row>
+  </ui-grid>
+
+  <h3>Reference:</h3>
+
+  <div class="ui equal width grid" id="reference-grid">
+    <div class="red column" id="reference-column">
+      <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+    </div>
+    <div class="green column">
+      <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+    </div>
+    <div class="row" id="reference-row">
+      <div class="blue column">
+        <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+      </div>
+      <div class="yellow column">
+        <img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png" style="width: 50%" />
+      </div>
+    </div>
+  </div>
+</script>
+<script src="../../node_modules/steal/steal.js" main="can-view-autorender"></script>
